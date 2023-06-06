@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script defer src="main.js"></script>
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!-- font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!--  CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>todo notes</title>
+</head>
+
+<body onload="displayNotes()">
+    <header>
+        <div class="headContainer">
+            <h1 class="logo">To-Do</h1>
+        </div>
+    </header>
+    <div class="formContainer">
+        <form id="formId" class="formClass" action="">
+            <input required class="inputs" id="noteTitle" type="text" title="Enter here the note title" maxlength="20" placeholder="Title" name="title" />
+
+            <textarea required class="inputs" id="noteDescription" title="Enter here the description of this note" type="text" placeholder="Description" name="description" cols="50" rows="6"></textarea>
+
+            <div class="dateTime">
+                <input required class="date" id="noteTime" type="time" title="Enter Time" placeholder="Time" name="time" />
+                <input required class="date" id="noteDate" type="date" title="Enter Date" placeholder="DD-MM-YYYY" name="date" />
+            </div>
+            <div class="saveReset">
+                <button title="reset" type="reset" class="btn btn-primary">
+            Reset
+          </button>
+                <button type="button" id="formBtn" title="save note" class="btn btn-primary">
+            Save
+          </button>
+            </div>
+        </form>
+    </div>
+    <div id="note-container" class="note-container"></div>
+
+    <footer>
+        <p class="copyrights">&copy; 2023 yoni hadar All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
